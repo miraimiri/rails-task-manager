@@ -1,6 +1,7 @@
 class TasksController < ApplicationController
   # Index > New > Create > Show > Edit > Update > Destroy
-  def index
+  def index # all tasks
+    @tasks = Task.all # save in instance variable to use in view
   end
 
   def new
