@@ -1,5 +1,6 @@
-<h1>These are all of your tasks.</h1>
+<h1>Task Manager - All </h1>
 <% @tasks.each do |task| %>
-  <h4> <%= task.title %> </h4>
-  <p> <%= task.description %> </p>
+  <h4> <%= task.completed %> <%= link_to task.title, task_path(task) %> </h4>
+  <p> <%= task.details %> </p>
 <% end %>
+<%= link_to "Create a new task", new_task_path %>
